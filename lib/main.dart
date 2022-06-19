@@ -48,37 +48,36 @@ class CodeScanner extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              GestureDetector(
-                onTap: () {
+              Expanded(
+                child:OutlineButton(onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) => ScanQR(),
                     ),
                   );
-                },
-                child: Expanded(
-                  child:TextButton(onPressed: null, child: Center(
-                    child: Text(
-                    'SCAN \n QR-CODE',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      wordSpacing: 15,
-                      fontWeight: FontWeight.bold,
-                      fontStyle: FontStyle.italic,
-                      fontSize: 25.0,
-                      color: Colors.white,
-                    ),
-                ),
+                }, 
+                color: Colors.black,
+                child: Center(
+                  child: Text(
+                  'SCAN \n QR-CODE',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    wordSpacing: 15,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic,
+                    fontSize: 25.0,
+                    color: Colors.white,
                   ),
-                //  style: TextButton.styleFrom(backgroundColor: Colors.grey,
-                //  ),
-                ),),
-              ),
+               ),
+                ),
+              //  style: TextButton.styleFrom(backgroundColor: Colors.grey,
+              //  ),
+              ),),
               SizedBox(
-                height: 100.0,              ),
-               GestureDetector(
-                onTap: () {
+                height: 50.0,              ),
+               Expanded(
+                child:OutlineButton(onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -86,24 +85,22 @@ class CodeScanner extends StatelessWidget {
                     ),
                   );
                 },
-                 child: Expanded(
-                  child:TextButton(onPressed: null, child: Center(
-                    child: Text(
-                    'GENERATE \n QR-CODE',
-                    textAlign: TextAlign.center,
-                       style: TextStyle(
-                      wordSpacing: 15,
-                      fontWeight: FontWeight.bold,
-                      fontStyle: FontStyle.italic,
-                      fontSize: 25.0,
-                      color: Colors.white,
-                    ),
-                             ),
+                color: Colors.black,
+                 child: Center(
+                  child: Text(
+                  'GENERATE \n QR-CODE',
+                  textAlign: TextAlign.center,
+                     style: TextStyle(
+                    wordSpacing: 15,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic,
+                    fontSize: 25.0,
+                    color: Colors.white,
                   ),
-                             // style: TextButton.styleFrom(backgroundColor: Colors.grey),
-                             ),
-                             ),
+                 ),
+                ),          // style: TextButton.styleFrom(backgroundColor: Colors.grey),
                ),
+              ),
             ],
           ),
         ),
